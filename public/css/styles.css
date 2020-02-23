@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+}
+
+.us_map_container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.title-div {
+  position: absolute;
+  text-align: center;
+  top: 32px;
+  left: 40px;
+}
+
+h1 {
+  font-size: 03vw;
+}
+
+#national-park-icon {
+  width: 03vw;
+  /* color: black; */
+  height: auto;
+  margin: auto;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#MA, #MN, #MT, #ND, #HI,
+#ID, #WA, #AZ, #CA, #CO,
+#NV, #NM, #OR, #UT, #WY,
+#AR, #IA, #KS, #MO, #NE,
+#OK, #SD, #LA, #TX, #CT,
+#NH, #RI, #VT, #AL, #FL,
+#GA, #MS, #SC, #IL, #IN,
+#KY, #NC, #OH, #TN, #VA,
+#WI, #WV, #DE, #DC, #MD,
+#NJ, #NY, #PA, #ME, #MI,
+#AK {
+  fill: #255A2C;
+}
+
+#MA:hover, #MN:hover, #MT:hover, #ND:hover, #HI:hover,
+#ID:hover, #WA:hover, #AZ:hover, #CA:hover, #CO:hover,
+#NV:hover, #NM:hover, #OR:hover, #UT:hover, #WY:hover,
+#AR:hover, #IA:hover, #KS:hover, #MO:hover, #NE:hover,
+#OK:hover, #SD:hover, #LA:hover, #TX:hover, #CT:hover,
+#NH:hover, #RI:hover, #VT:hover, #AL:hover, #FL:hover,
+#GA:hover, #MS:hover, #SC:hover, #IL:hover, #IN:hover,
+#KY:hover, #NC:hover, #OH:hover, #TN:hover, #VA:hover,
+#WI:hover, #WV:hover, #DE:hover, #DC:hover, #MD:hover,
+#NJ:hover, #NY:hover, #PA:hover, #ME:hover, #MI:hover,
+#AK:hover {
+  cursor: pointer;
+  fill: lightgreen;
+}
+
+
+.marker {
+  background-image: url('./img/new_location_marker.png');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  /* border-radius: 50%; */
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#map {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+}
+
+#other-park-absolute-container {
+  position: absolute;
+  display: none;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0,0,0,0.6); /* Black background with opacity */
+  border: 2px solid black;
+}
+
+#other-park-relative-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#back-to-map {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  color: white;
+  /* font-size: 02vw; */
+  cursor: pointer;
+}
+
+#other-park-text {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  color: white;
+  padding-right: 40px;
+}
+
+
+#remove-overlay {
+  position: absolute;
+  top: 32px;
+  right: 40px;
+  color: white;
+  font-size: 03vw;
+  cursor: pointer;
+}
+
+#other-parks {
+  position: absolute;
+  display: none;
+  bottom: 32px;
+  right: 40px;
+  color: white;
+  font-size: 02vw;
+  cursor: pointer;
+}
